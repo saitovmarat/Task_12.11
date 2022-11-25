@@ -11,11 +11,12 @@ namespace Task_12._11
     {
         string Text;
         string DateOfCompletion;
-        Executor Executor;
-        public Report(string text, string dateOfСopmletion, Executor Executor)
+        Employee Executor;
+        public Report(string text, string dateOfСopmletion, Employee executor)
         {
             Text = text;
             DateOfCompletion = dateOfСopmletion;
+            Executor = executor;
 
 
 

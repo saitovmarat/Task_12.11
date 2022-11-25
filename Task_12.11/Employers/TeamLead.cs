@@ -7,7 +7,7 @@ namespace Task_12._11
     /// <summary>
     /// Тимлид
     /// </summary>
-    class TeamLead : Employee
+    /*class TeamLead
     {
         public TeamLead(string name)
         {
@@ -86,5 +86,5 @@ namespace Task_12._11
             return new Task(description, deadline, initiator, executor, TaskStatus.Appointed);
         }
 
-    }
+    }*/
 }

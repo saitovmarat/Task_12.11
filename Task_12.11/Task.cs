@@ -13,13 +13,13 @@ namespace Task_12._11
     }
     class Task
     {
-        string Description;
+        public string Description;
         DateTime Deadline;
-        public Executor Initiator;
-        public Executor Executor;
-        TaskStatus Status;
-        string Report;
-        public Task(string description, DateTime deadline, Executor initiator, Executor executor, TaskStatus status)
+        public Employee Initiator;
+        public Employee Executor;
+        public TaskStatus Status;
+        Report Report;
+        public Task(string description, DateTime deadline, Employee initiator, Employee executor, TaskStatus status)
         {
             Description = description;
             Deadline = deadline;
@@ -27,26 +27,9 @@ namespace Task_12._11
             Executor = executor;
             Status = status;
         }
-        public void ChangeStatus(string a)
+        public TaskStatus ShowTaskStatus()
         {
-            switch (a)
-            {
-                case "appointed":
-                    Status = TaskStatus.Appointed;
-                    break;
-                case "inWork":
-                    Status = TaskStatus.InWork;
-                    break;
-                case "underReview":
-                    Status = TaskStatus.UnderReview;
-                    break;
-                case "completed":
-                    Status = TaskStatus.Completed;
-                    break;
-                default:
-                    break;
-            }
-
+            return Status;
         }
 
 

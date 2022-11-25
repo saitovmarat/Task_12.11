@@ -20,7 +20,7 @@ namespace Task_12._11
         Employee Initiator;
         Employee TeamLeader;
         List<Task> Tasks;
-        ProjectStatus Status;
+        public ProjectStatus Status;
         public Project(string description, DateTime deadline, Employee initiator, Employee teamLeader, List<Task> tasks, ProjectStatus status)
         {
             Description = description;
@@ -30,21 +30,10 @@ namespace Task_12._11
             Tasks = tasks;
             Status = status;
         }
-        public void ChangeStatus(string a)
+        
+        public void ChangeStatus()
         {
-            switch (a)
-            {
-                case "execution":
-                    Status = ProjectStatus.ProjectExecution;
-                    break;
-                case "closed":
-                    Status = ProjectStatus.ProjectClosed;
-                    break;
-                default:
-                    break;
-
-            }
-            
+            Status++;
         }
 
 
