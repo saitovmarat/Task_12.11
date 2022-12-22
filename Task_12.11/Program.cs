@@ -116,6 +116,7 @@ namespace Task_12._11
                 {new Employee("Петр", new List<Task>(), new List<Task>())},
                 {new Employee("Александр", new List<Task>(), new List<Task>())}
             };
+
             List<Task> tasks = new List<Task>
             {
                 {new Task("Do Tumakov", new DateTime(2022, 12, 12), employees[0], employees[1], TaskStatus.Appointed)},
@@ -170,15 +171,16 @@ namespace Task_12._11
             Project project = new Project("Cooking", new DateTime(2022, 01, 11), employees[2], employees[1], tasks, ProjectStatus.Project);
             project.ChangeStatus();
 
-            
-            foreach(Task task in tasks)
+
+            foreach (Task task in tasks)
             {
-                List<Employee> employeesToDisplay = employees;                
+                List<Employee> employeesToDisplay = employees;
                 employeesToDisplay.Remove(task.Initiator);
 
                 TheMainProcess(employeesToDisplay, task); 
             }
             OutputFinalInformation(employees);
+            project.ChangeStatus();
         }
     }
 }

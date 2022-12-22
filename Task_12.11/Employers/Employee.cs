@@ -7,6 +7,9 @@ namespace Task_12._11
 
     class Employee
     {
+        /// <summary>
+        /// Работник
+        /// </summary>
         public string Name;
         public List<Task> ToDo = new List<Task>();
         List<Task> ToCheck = new List<Task>();
